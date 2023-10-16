@@ -1,0 +1,34 @@
+# Routing 
+ルーティングを行いたいときには、以下のコードを記載すれば
+それを実現することができます。
+```python {4-6,8-10}
+from flask import Flask
+App = Flask(__name__)
+
+@App.route("/")
+def HelloWorld():
+    return "<p>Hello World!</p>"
+
+@App.route("/about")
+def About():
+    return "<p>Aboutページ!</p>"
+
+if __name__ == ('__main__'):
+    app.run(debug=True,host='0.0.0.0',port=5000)
+```
+
+## ルーティングに挿入される内容の型宣言
+ルーティングパスに入る内容がどのような型にするかを制限することができます。
+以下はその種類と説明です。
+|型|説明|
+|----|----|
+|`string`|文字列型のみ許容。スラッシュは含まない。|
+|`int`|整数型のみ許容。|
+|`float`|浮動小数点数型のみ許容。使うことあるか...?(わからん)|
+|`path`|文字列型に加えてスラッシュを許容。|
+|`uuid`|UUID文字列のみ許容。|
+
+### 指定例
+```python 
+@app.route("user/<string:name>/post/<uuid:id>")
+```

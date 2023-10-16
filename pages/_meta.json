@@ -1,11 +1,6 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "routing": "Routing (A Folder)",
   "contact": {
     "title": "Contact ↗",
     "type": "page",

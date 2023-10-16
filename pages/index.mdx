@@ -1,11 +1,31 @@
 # Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
 
-## What is Nextra?
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+## What is Flask?
+**Flask**とは、PythonでWebアプリケーションを開発するためのフレームワークで
+標準で提供される機能が最低限なマイクロフレームワークに分類される。
 
-## Documentation
+### Install
+`pip install flask`でインストールを行う
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+### Basic template
+基本となる構文は以下の通りである。
+```python
+from flask import Flask
+App = Flask(__name__)
+
+@App.route("/")
+def HelloWorld():
+    return "<p>Hello World!</p>"
+```
+
+このプログラムを実行するには様々な方法があります。
+
+1. `flask --app [プログラムを保存したファイルの名前] run`を実行する
+2. ファイル名を`app`にして`、flask run`を実行する。
+3. 以下の記述を行う
+```python
+if __name__ == ('__main__'):
+    app.run(debug=True,host='0.0.0.0',port=5000)
+```
+を記述して、ファイルを実行する。
