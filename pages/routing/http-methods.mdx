@@ -1,0 +1,25 @@
+# HTTPメソッドの受け取り
+HTMLメソッドを受け取れるようにするためには、以下のような
+記述をルーティングを決定する関数の中にある、
+`methods`引数に配列を渡す必要があります。
+```python /methods=["GET","POST"]/
+…
+@app.route("login",methods=["GET","POST"])
+…
+```
+
+### 受け取ったHTTPメソッドに対する処理を指定する
+受け取ったHTTPメソッドは、`request`というオブジェクト？の中にあるので、
+その中の`method`プロパティを条件分岐で確認する。
+```python /methods=["GET","POST"]/
+…
+@app.route("login",methods=["GET","POST"])
+def login():
+    if request.method == "POST":
+        return do_the_login()
+    else:
+        return show_the_login_form()
+…
+```
+また別の方法もある。（当ドキュメントでは記載しない）
+

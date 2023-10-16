@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
   "routing": "Routing (A Folder)",
+  "render": "Rendering (A Folder)",
   "contact": {
     "title": "Contact ↗",
     "type": "page",

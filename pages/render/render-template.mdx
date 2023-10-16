@@ -1,0 +1,18 @@
+# Template Rendering
+いちいちHTML文を直で書いていたら面倒なので
+別ファイルで管理できるようにすることもできる。
+```python /render_template/ {6}
+from flask import Flask,render_template
+App = Flask(__name__)
+
+@App.route("/")
+def HelloWorld():
+    return render_template("index.html")
+
+if __name__ == ('__main__'):
+    app.run(debug=True,host='0.0.0.0',port=5000)
+```
+
+この際、Flaskのプログラムを実行するpythonのファイルと
+同じディレクトリ（ルートディレクトリ）に、`templates`というフォルダを作成し、
+その中にHTMLファイルを格納しておく必要がある。
