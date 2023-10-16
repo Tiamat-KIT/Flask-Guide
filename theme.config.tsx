@@ -2,9 +2,9 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>Flask Doc</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/Tiamat-KIT/Flask-Guide',
   },
   chat: {
     link: 'https://discord.com',
