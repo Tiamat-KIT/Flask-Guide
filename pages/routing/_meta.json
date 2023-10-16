@@ -1,4 +1,5 @@
 {
     "DefaultRouting":"Routing",
-    "html-escaping": "HTML Escaping"
+    "html-escaping": "HTML Escaping",
+    "html-methods": "HTML-Methods"
 }
